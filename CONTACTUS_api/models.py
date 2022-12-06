@@ -7,7 +7,3 @@ class contact_us(models.Model):
     your_email = models.CharField(max_length=20,null=False,unique=True)
     phone_number = models.CharField(max_length=15,null=False,unique=True)
     your_message =models.textfield(max_length=225,null=False)
-
-          class Meta:
-            verbose_name = "Contact Us"
-            verbose_name_plural = "Contact Us"
