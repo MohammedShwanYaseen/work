@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'l%v)sz#@co!0h-e$173+8d^g=3_lxh&6j3l%y%ca6ab@q4*i27'
+SECRET_KEY = '4@1gbc6%%8+s45153h+8oc$w1j9wr^%u44m2d1r3ey3-2_c1c8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,20 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'rest_framework.authtoken',
-    'ARTHOR_PROFILE_api',
-    'ARTHOR_PROVIEW_api',
-    'CART_api',
-    'COMMUNTIY_api',
-    'CONTACTUS_api',
-    'COURSES_api',
-    'COURSES_PAGE_api',
-    'COURSES_PROVIEW_api',
-    'EVENT_api',
-    'HOME_api',
-    'NOTOFCATION_API',
-    'PROFILE_api',
 ]
 
 MIDDLEWARE = [
@@ -61,6 +47,21 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'ARTHOR_PROFILE_api',
+    'ARTHOR_PROVIEW_api',
+    'CART_api',
+    'COMMUNTIY_api',
+    'CONTACTUS_api',
+    'COURSE_api',
+    'COURSE_PAGE_api',
+    'COURSE_PROVIEW_api',
+    'EVENT_api',
+    'HOME_api',
+    'NOTOFCATION_api',
+    'PROFILE_api',
+
 ]
 
 ROOT_URLCONF = 'api_project.urls'
