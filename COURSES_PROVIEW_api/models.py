@@ -1,21 +1,39 @@
 from django.db import models
 
 class Category(models.Model):
-    """docstring fo Category."""
+    id =  models.IntegerField(primary_key= True)
+    name = models.CharField(max_length = 100)
 
-    def __init__(self, arg):
-        supe Category, self).__init__()
-        self.arg = arg
+class Course(models.Model):
+    id =  models.IntegerField(primary_key= True)
+    category_id = models.ForeignKey(Category,null=True, on_delete = models.SET_NULL)
+    name = models.CharField(max_length = 150)
+    details = models.CharField(max_length =1000)
+    price = models.IntegerField()
+    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    language = models.CharField(max_length =50)
 
-category_name = models.charfield(max_length=25,null=False)
-category_date = models.DateTimeField(auto_new_add=True)
-category_description =models.charfield(null=False)
-instructor =models.charfield(max_length=25,null=False)
-courses_by_instructor =
-language =
-Available_language =
-course_description =models.charfield(null=False)
-overview =models.charfield()
+
+class CourseImage(models.Model):
+     id = models.IntegerField(primary_key= True)
+     image_path = models.TextField()
+     course_id = models.ForeignKey(Course, null=True , on_delete=models.SET_NULL)
+
+
+class CourseVideo(models.Model):
+     id = models.IntegerField(primary_key= True)
+     video_path = models.TextField()
+     course_id = models.ForeignKey(Course, null=True , on_delete=models.SET_NULL)
+     name = models.CharField(max_length=100)
+     description = models.TextField()
+
+
+class Insturctor(models.Model):
+    id = models.IntegerField(primary_key= True)
+    name = models.CharField(max_length=100)
+    image = models.TextField()
+    description = models.TextField()
 
 RATE_CHOICES=[
 (1,'1')
