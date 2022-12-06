@@ -37,6 +37,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+        'rest_framework',
+        'rest_framework.authtoken',
+        'ARTHOR_PROFILE_api',
+        'ARTHOR_PROVIEW_api',
+        'CART_api',
+        'COMMUNTIY_api',
+        'CONTACTUS_api',
+        'COURSE_api',
+        'COURSE_PAGE_api',
+        'COURSE_PROVIEW_api',
+        'EVENT_api',
+        'HOME_api',
+        'NOTOFCATION_api',
+        'PROFILE_api',
 ]
 
 MIDDLEWARE = [
@@ -47,20 +61,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'rest_framework',
-    'rest_framework.authtoken',
-    'ARTHOR_PROFILE_api',
-    'ARTHOR_PROVIEW_api',
-    'CART_api',
-    'COMMUNTIY_api',
-    'CONTACTUS_api',
-    'COURSE_api',
-    'COURSE_PAGE_api',
-    'COURSE_PROVIEW_api',
-    'EVENT_api',
-    'HOME_api',
-    'NOTOFCATION_api',
-    'PROFILE_api',
+
 
 ]
 
