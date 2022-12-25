@@ -10,16 +10,16 @@ class CourseViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.CourseSerializer
     queryset = models.Course.objects.all()
     filter_backends = (filters.SearchFilter,)
-    search_fields = ('name', 'category_id', 'updated_at', 'language',)
+    search_fields = ('Course_name','language',)
 
 class CategoryViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.CategorySerializer
     queryset = models.Category.objects.all()
     filter_backends = (filters.SearchFilter,)
-    search_fields = ('name',)
+    search_fields = ('Category_name',)
 
 class InsturctorViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.InsturctorSerializer
     queryset = models.Insturctor.objects.all()
     filter_backends = (filters.SearchFilter,)
-    search_fields = ('name',)
+    search_fields = ('Insturctor_name',)
