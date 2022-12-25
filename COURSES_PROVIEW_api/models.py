@@ -7,9 +7,8 @@ from rest_framework.authtoken.models import Token
 
 
 class Category(models.Model):
-    name = models.CharField(max_length = 100,null=False)
-    language = models.CharField(max_length =50,null=False)
-    #available_language =
+    Category_name = models.CharField(max_length = 100,null=False)
+    available_language =models.CharField(max_length =50,null=False)
     Insturctor_name = models.foreignkey(Insturctor,null=False)
     course_description = models.TextField()
     over_view = models.TextField()
@@ -53,7 +52,7 @@ class Course(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
     language = models.CharField(max_length =50)
-    book_live_session = book = models.FileField(null=True,upload_to='book')
+    book_live_session = models.FileField(null=True,upload_to='book')
 
 
 class Insturctor(models.Model):
@@ -63,7 +62,7 @@ class Insturctor(models.Model):
     description = models.TextField()
     NumOfStudent =IntegerField()
     Insturctor_rate = model.positiveSmilIntgerField(choices=RATE_CHOICES)
-     Insturctor_courses = models.ManyToManyField(Course)
+    Insturctor_courses = models.ManyToManyField(Course)
 
 RATE_CHOICES=[
 (1,'1')

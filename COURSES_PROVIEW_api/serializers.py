@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from shift_ev.newapp import models
+from api_system.COURSE_PROVIEW import models
 
 
 class CategoryConfigSerializer(serializers.ModelSerializer):
