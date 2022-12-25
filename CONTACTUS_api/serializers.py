@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from shift_ev.addonsapp import models
+from CONTACTUS_api import models
 
 class contact_usSerializer(serializers.ModelSerializer):
     class Meta:
