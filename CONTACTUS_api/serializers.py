@@ -5,4 +5,3 @@ class contact_usSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.contact_us
         fields = "__all__"
-        read_only_fields = ("id",)
