@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from api_system import models
+from COURSES_PROVIEW_api import models
 
 
 class CategoryConfigSerializer(serializers.ModelSerializer):
